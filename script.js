@@ -14,15 +14,25 @@ let fruits = ['Apple', 'Banana', 'Cherry', 'Date', 'Elderberry'];
  for ( let i = 0;i < elem.length; i++ ){
   elem[i].style.backgroundColor = 'yellow'
  }
-
-g
- 
-
 // Напишите код, который находит все элементы с классом highlight и изменяет их цвет фона на желтый.
+ const btn = document.querySelector("#toggle-button");
+ btn.addEventListener("click",()=>{
+ const item =document.querySelector("#toggle-element")
+ const disp =item.style.display;
+ console.log(disp);
+ if( disp === "none"){
+   item.style.display= "block"
+ 
+ }else {
+   item.style.display= "none"
+ }
+ })
+ // Создайте кнопку с текстом "Изменить цвет". При нажатии на кнопку все элементы с классом change-color должны поменять свой цвет текста на красный.
+
+
 
 // Создайте список <ul>. Добавьте в него пять элементов <li> с текстом "Элемент 1", "Элемент 2" и так далее. Каждый нечетный элемент списка должен иметь класс odd и синий цвет текста.
 
-// Создайте кнопку с текстом "Изменить цвет". При нажатии на кнопку все элементы с классом change-color должны поменять свой цвет текста на красный.
 
 // Создайте форму с полем ввода текста и кнопкой "Добавить". При нажатии на кнопку в конец списка <ul> должен добавляться новый элемент <li> с текстом из поля ввода.
 
@@ -35,3 +45,9 @@ g
 
 {/* <img id="image" src="old-image.jpg" alt="Старое изображение" width="300">
 <button id="change-image-button">Изменить изображение</button> */}
+const imgchg = document.querySelector("#change-image-button")
+  imgchg.addEventListener('click', function(){
+    const item = document.querySelector("#image");
+    console.dir(item)
+    item.src = 'https://s1.1zoom.me/big0/846/Iceland_Mountains_Waterfalls_616668_1280x640.jpg'
+  })
